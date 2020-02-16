@@ -36,6 +36,3 @@ public class DropDown {
         Assert.assertEquals(element2.isSelected(), true);
     }
 }
-
-
-
