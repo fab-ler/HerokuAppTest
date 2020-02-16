@@ -30,9 +30,9 @@ public class DropDown {
         driver.get("http://the-internet.herokuapp.com/dropdown");
         WebElement element1 = driver.findElement(By.xpath("//select[@id='dropdown']/option[@value='1']"));
         element1.click();
-        Assert.assertEquals(element1.isSelected(), true);
+        Assert.assertEquals(element1.isSelected(), true, "Option 1 is selected");
         WebElement element2 = driver.findElement(By.xpath("//select[@id='dropdown']/option[@value='2']"));
         element2.click();
-        Assert.assertEquals(element2.isSelected(), true);
+        Assert.assertEquals(element2.isSelected(), true, "Option 2 is selected");
     }
 }
