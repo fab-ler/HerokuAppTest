@@ -29,16 +29,22 @@ public class Inputs {
     public void inputsTest() {
         driver.get("http://the-internet.herokuapp.com/inputs");
         driver.findElement(By.xpath("//input")).sendKeys(Keys.ARROW_UP);
-        String firstResult = driver.findElement(By.xpath("//input")).getAttribute("value");
-        assertEquals(firstResult, "1");
+        String upKeyResult = driver.findElement(By.xpath("//input")).getAttribute("value");
+        assertEquals(upKeyResult, "1");
         driver.findElement(By.xpath("//input")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN);
-        String secondResult = driver.findElement(By.xpath("//input")).getAttribute("value");
-        assertEquals(secondResult, "-3");
+        String downKeyResult = driver.findElement(By.xpath("//input")).getAttribute("value");
+        assertEquals(downKeyResult, "-3");
 
         // проверить ручной ввод буквенных симолов
         driver.navigate().refresh();
-        driver.findElement(By.xpath("//input")).sendKeys("two");
-        String thirdResult = driver.findElement(By.xpath("//input")).getAttribute("value");
-        assertEquals(thirdResult, "", "Manual input of chars is disabled");
+        driver.findElement(By.xpath("//input")).sendKeys("www");
+        String alphaResult = driver.findElement(By.xpath("//input")).getAttribute("value");
+        assertEquals(alphaResult, "");
+
+        // проверить ручной ввод цифровых симолов
+        driver.navigate().refresh();
+        driver.findElement(By.xpath("//input")).sendKeys("12");
+        String numericResult = driver.findElement(By.xpath("//input")).getAttribute("value");
+        assertEquals(numericResult, "12");
     }
 }
