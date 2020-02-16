@@ -11,17 +11,17 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 
 public class CheckBoxes {
-    private WebDriver browser;
+    private WebDriver driver;
 
     @BeforeTest
-    public void driverSetup() {
+    public void setUp() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-        browser = new ChromeDriver();
+        driver = new ChromeDriver();
     }
 
     @AfterMethod(alwaysRun = true)
-    public void closeBrowser() {
-        browser.quit();
+    public void tearDown() {
+        driver.quit();
     }
 
     /*
@@ -31,9 +31,9 @@ public class CheckBoxes {
      */
     @Test
     public void checkBoxesTest() {
-        browser.get("http://the-internet.herokuapp.com/checkboxes");
+        driver.get("http://the-internet.herokuapp.com/checkboxes");
         By checkboxes = By.tagName("input");
-        List<WebElement> checkBoxes = browser.findElements(By.tagName("input"));
+        List<WebElement> checkBoxes = driver.findElements(By.tagName("input"));
         assertEquals(checkBoxes.get(0).isSelected(), false, "the 1st checkbox is unchecked");
         checkBoxes.get(0).click();
         assertEquals(checkBoxes.get(0).isSelected(), true, "the 1st checkbox is checked");
