@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестовое задание</title>
+</head>
+<body>
+
+<h1 style="color:#9ACD32;">Создание страницы с использованием html & css</h1>
+<p>
+    Создать страницу, используя html и css, обязательные элементы:
+<p>table (таблица) </p>
+<p>Input (текстовое поле) </p>
+<p>Checkbox </p>
+<p>Select </p>
+<p>Button </p>
+<p>Images </p>
+<p>Text </p>
+<p>(гиперссылки) </p>
+Разместить HTML-файл на github (в ресурсах проекта HerokuApp), добавить dmitryrak11@gmail.com в коллабораторы проекта и
+сделать Pull Request
+</p>
+
+<style>
+<head>
+<body>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 0.01px solid #dddddd;
+  text-align: left;
+  padding: 2px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Пример таблицы</h2>
+
+<table>
+    <tr>
+        <th>Customer ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>0001</td>
+        <td>Mary James</td>
+        <td>m.james@gmail.com</td>
+    </tr>
+    <tr>
+        <td>0002</td>
+        <td>Steve James</td>
+        <td>s.james@gmail.com</td>
+    </tr>
+    <tr>
+        <td>0003</td>
+        <td>Clyde Foules</td>
+        <td>c.foules@gmail.com</td>
+    </tr>
+    <tr>
+        <td>0004</td>
+        <td>Sylvia Foules</td>
+        <td>s.foules@gmail.com</td>
+    </tr>
+    <tr>
+        <td>0005</td>
+        <td>Mike Balmer</td>
+        <td>m.balmer@gmail.com</td>
+    </tr>
+    <tr>
+        <td>0006</td>
+        <td>Shelly Balmer</td>
+        <td>s.balmer@gmail.com</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+
+<h2>Пример текстового поля ввода</h2>
+
+<form>
+    <label for="fname">Введите текст:</label><br>
+    <input id="fname" name="fname" type="text"><br>
+</form>
+
+<h1>Добавить к заказу</h1>
+
+<form action="/action_page.html">
+    <input id="extra1" name="extra1" type="checkbox" value="sauce">
+    <label for="extra1">доп. соус</label><br>
+    <input id="extra2" name="extra2" type="checkbox" value="appliances">
+    <label for="extra1">доп. приборы</label><br>
+    <input id="extra3" name="extra3" type="checkbox" value="package">
+    <label for="extra1">доп. упаковку</label><br><br>
+    <input type="submit" value="Отправить">
+</form>
+
+<h1>Пример селекта</h1>
+
+<p>Выпадающий список:</p>
+
+<label for="cars">Выберите время доставки:</label>
+
+<select id="cars">
+    <option value="18">18:00 - 19:00</option>
+    <option value="19">19:00 - 20:00</option>
+    <option value="20">20:00 - 21:00</option>
+    <option value="21">21:00 - 22:00</option>
+</select>
+
+<h1>Пример кнопки</h1>
+
+<button onclick="alert('Спасибо, что попробовали!')" type="button">Нажать</button>
+
+
+<h2>HTML картинка</h2>
+<img src="img.png">
+
+<p></p>
+<h1>Атрибут "гиперссылка"</h1>
+
+<p><a href="https://teachmeskills.by/">TeachMeSkills</a></p>
+
